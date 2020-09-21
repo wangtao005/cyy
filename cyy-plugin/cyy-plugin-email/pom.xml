@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	  <groupId>org.mics</groupId>
+	  <artifactId>cyy-plugin</artifactId>
+	  <version>1.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>org.mics</groupId>
+	<artifactId>cyy-plugin-email</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+	<name>cyy-plugin-email</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-componet-token</artifactId>
+		</dependency>	
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-componet-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>		
+	</dependencies>
+   	
+</project>

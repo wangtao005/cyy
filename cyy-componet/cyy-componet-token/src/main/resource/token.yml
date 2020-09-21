@@ -1,0 +1,19 @@
+#==================== JWT Configuration =====================#
+jwt:
+  secret: 123456
+  payload-iss: ifox.site
+  payload-exp: 100
+  #开启token加密#
+  wrapper-switch: false
+  #加密/解密时的key，开始token加密时有效，请勿随意更改！更改后一定要测试！(TokenUtil一起更改)
+  wrapper-key: ijhy1876gbs0978n
+  #开始请求时间校验，开启前提需要开启token加密，否则将出现异常
+  verify-time: false
+  #请求有效时间，单位：毫秒，开启请求时间校验时有效
+  verify-duration-miles: 60000
+  #是否允许重复登录
+  duplicate: false
+  #默认通用验证码
+  default-token: default@token
+  #token缓存时间 2天 (秒)
+  token-cache-time: 172800

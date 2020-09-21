@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mics</groupId>
+    <artifactId>cyy</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>org.mics</groupId>
+  <artifactId>cyy-plugin</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.1-SNAPSHOT</version>
+  <modules>
+    <module>cyy-plugin-captcha</module>
+    <module>cyy-plugin-email</module>
+    <module>cyy-plugin-pay</module>
+    <module>cyy-plugin-sms</module>
+    <module>cyy-plugin-push</module>
+    <module>cyy-plugin-order</module>
+    <module>cyy-plugin-file</module>
+  </modules>
+  
+</project>

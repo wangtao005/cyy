@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	<groupId>org.mics</groupId>
+	<artifactId>cyy</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.3.RELEASE</version>
+	</parent>
+  <modules>
+  	<module>cyy-common</module>
+  	<module>cyy-componet</module>
+  	<module>cyy-web</module>
+	<module>cyy-plugin</module>
+	<module>cyy-modular</module>
+  </modules>
+  
+  <repositories>
+	  <repository>
+		  <id>nexus</id>
+		  <name>myNexus</name>
+		  <url>http://171.217.93.53:8081/repository/maven-public/</url>
+	  </repository>
+  </repositories>
+  <distributionManagement>   
+       <repository>   
+           <id>releases</id>   
+           <name>Nexus Release Repository</name>   
+           <url>http://171.217.93.53:8081/repository/maven-releases/</url>   
+       </repository>   
+       <snapshotRepository>   
+           <id>snapshots</id>   
+           <name>Nexus Snapshot Repository</name>   
+           <url>http://171.217.93.53:8081/repository/maven-snapshots/</url>   
+       </snapshotRepository>   
+  </distributionManagement>  
+    
+  <properties>
+    <jdk>1.8</jdk>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.9.2</version>
+    </dependency>
+    <dependency>
+       <groupId>io.springfox</groupId>
+       <artifactId>springfox-swagger2</artifactId>
+       <version>2.9.2</version>
+    </dependency>
+  </dependencies>
+  
+   <!-- 版本控制:子项目选择性引用 -->
+    <dependencyManagement>
+        <dependencies>
+        	<!-- 工具类 -->
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-common-lang</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            
+            <!-- 基础组件 -->
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-componet-auth</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-componet-cache</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-componet-jpa</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-componet-log</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-componet-token</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            
+            <!-- web核心包 -->
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-web</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            
+            <!-- 插件 begin-->
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-plugin-captcha</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-plugin-email</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+             <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-plugin-order</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-plugin-pay</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-plugin-sms</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-plugin-push</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            
+            <!-- 通用业务模块 -->
+            <dependency>
+                <groupId>org.mics</groupId>
+                <artifactId>cyy-modular-endUser</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            
+  		</dependencies>
+  	</dependencyManagement>
+  	
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>true</addMavenDescriptor>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <doclint>none</doclint>
+                </configuration>
+            </plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<!-- 是否替换资源中的属性 -->
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+	</build>
+	
+</project>

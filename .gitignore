@@ -1,0 +1,15 @@
+/target/
+
+/.settings/
+.classpath
+.project
+/cyy-componet/cyy-componet-mybatis/*.gitignore
+/cyy-componet/cyy-componet-mybatis/.settings/*.prefs
+/cyy-modular/*.gitignore
+/cyy-modular/cyy-modular-enduser/*.gitignore
+/cyy-plugin/cyy-plugin-order/*.gitignore
+/cyy-plugin/cyy-plugin-order/.settings/*.prefs
+/cyy-plugin/cyy-plugin-file/.gitignore
+/cyy-plugin/cyy-plugin-file/.settings/org.eclipse.core.resources.prefs
+/cyy-plugin/cyy-plugin-file/.settings/org.eclipse.jdt.core.prefs
+/cyy-plugin/cyy-plugin-file/.settings/org.eclipse.m2e.core.prefs

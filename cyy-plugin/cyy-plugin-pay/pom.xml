@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mics</groupId>
+    <artifactId>cyy-plugin</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.mics</groupId>
+  <artifactId>cyy-plugin-pay</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+  <name>cyy-plugin-pay</name>
+
+
+  <dependencies>
+  	<dependency>
+  		<groupId>org.mics</groupId>
+  		<artifactId>cyy-componet-jpa</artifactId>
+  	</dependency>
+  	<dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+    </dependency>
+    <dependency>
+		<groupId>org.mics</groupId>
+		<artifactId>cyy-componet-token</artifactId>
+	</dependency>
+  </dependencies>
+</project>

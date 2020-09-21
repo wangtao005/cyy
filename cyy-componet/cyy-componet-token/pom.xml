@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mics</groupId>
+    <artifactId>cyy-componet</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.mics</groupId>
+  <artifactId>cyy-componet-token</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+  <name>cyy-componet-token</name>
+  
+
+  <dependencies>
+	<dependency>
+		  <groupId>org.mics</groupId>
+		  <artifactId>cyy-common-lang</artifactId>
+	</dependency>
+	<dependency>
+           <groupId>com.auth0</groupId>
+           <artifactId>java-jwt</artifactId>
+           <version>3.8.3</version>
+    </dependency>
+    <dependency>
+        <groupId>com.jsoniter</groupId>
+        <artifactId>jsoniter</artifactId>
+        <version>0.9.23</version>
+    </dependency>
+    <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+    </dependency>
+    <dependency>
+    	<groupId>org.mics</groupId>
+    	<artifactId>cyy-componet-cache</artifactId>
+    </dependency>
+     <dependency>
+    	<groupId>org.mics</groupId>
+    	<artifactId>cyy-web</artifactId>
+    </dependency>
+  </dependencies>
+  
+</project>

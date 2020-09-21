@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mics</groupId>
+    <artifactId>cyy-plugin</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.mics</groupId>
+  <artifactId>cyy-plugin-sms</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+  <name>cyy-plugin-sms</name>
+  
+	<dependencies>
+		<dependency>
+		  <groupId>com.aliyun</groupId>
+		  <artifactId>aliyun-java-sdk-core</artifactId>
+		  <version>4.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-common-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-componet-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-componet-token</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mics</groupId>
+			<artifactId>cyy-web</artifactId>
+		</dependency>
+	</dependencies>
+	
+</project>
